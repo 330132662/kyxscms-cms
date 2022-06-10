@@ -1,0 +1,82 @@
+.webuploader-container{
+    padding: 0;
+}
+
+.webuploader-element-invisible { 
+    position: absolute !important; 
+    clip: rect(1px,1px,1px,1px); 
+}
+
+.input-group .layui-btn{
+    width: 100px;
+}
+
+.file_box {
+    position: relative;
+    padding-top: 1px;
+}
+
+.file_box .file_progress {
+    line-height: 30px;
+    position: relative;
+    z-index: 1;
+    height: 30px;
+    margin-top: 5px;
+    border-radius: 2px;
+    background: #ebebeb;
+}
+
+.file_box .file_progress .file_progress_txt {
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+    padding: 0 10px;
+    overflow: hidden;
+    height: 30px;
+    white-space: nowrap;
+    color: #555;
+}
+
+.file_box .file_progress .file_progress_txt .file_status {
+    float: left;
+}
+
+.file_box .file_progress .file_progress_txt .file_status em {
+    font-size: 14px;
+    margin: 0 15px 0 5px;
+    font-style:normal;
+}
+
+.file_box .file_progress .file_progress_txt .file_info {
+    float: left;
+}
+
+.file_box .file_progress .file_progress_txt .file_info span {
+  margin-right: 10px;
+}
+
+.file_box .file_progress .file_cancel {
+    position: absolute;
+    z-index: 2;
+    right: 10px;
+}
+
+.file_box .file_progress .file_progress_record {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 0;
+    height: 30px;
+    -webkit-transition: width .5s;
+    -moz-transition: width .5s;
+    -o-transition: width .5s;
+    transition: width .5s;
+    border-radius: 2px;
+    background-color: #2fb3ff;
+}
+
+.file_box .file_progress .file_progress_record .file_progress_txt {
+    color: #fff;
+}

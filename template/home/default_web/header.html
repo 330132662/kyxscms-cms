@@ -1,0 +1,63 @@
+<div class="index-header" id="topback">
+	<div class="header-bg">
+		<div class="logozone">
+
+			<!--搜索部分 start-->
+			<div class="wrap1200 logo">
+				<a href="/" class="fl"><img src="{$web['logo']}" class="logoImage"></a>
+				<div id="mod-search1">
+					<div class="searchbox">
+						<form action="{:url('home/search/index')}" method="get">
+						<div class="searchbox-inner">
+							<input type="text" name="keyword" placeholder="找书" class="searchinput">
+							<i class="search-icon"></i>
+							<input type="submit" value="" class="searchbtn" style="background-color:#333333">
+							<span class="loadIcon"></span>
+						</div>
+						</form>
+					</div>
+				</div>
+				{notempty name="user"}
+				<div class="mybookshelf isLogged fr">
+                    <img src="{$user['headimgurl']}" class="headPortrait">
+                    <a href="{:url('user/index/index')}">{$user['username']}</a>
+                    <span></span>
+                </div>
+                <div class="suspend hidden">
+                    <i></i>
+                    <a href="{:url('user/index/index')}">个人中心</a>
+                    <a href="{:url('user/bookshelf/index')}">我的书架</a>
+                    <a href="{:url('user/recentread/index')}">阅读记录</a>
+                    <a href="{:url('user/user/logout')}" class="exit">退出</a>
+                </div>
+                {else/}
+                <div class="mybookshelf fr">
+					<i class="user"></i>
+					<a href="{:url('user/user/login')}">登录</a>
+					<a href="{:url('user/user/reg')}">注册</a>
+				</div>
+                {/notempty}
+				<a href="{:url('user/bookshelf/index')}" class="mybookshelf fr"> <i></i>
+					我的书架
+				</a>
+			</div>
+			<!--搜索部分 end-->
+			<!--导航 start-->
+		</div>
+	</div>
+	<div class="firstnav">
+		<ul>
+			{nav id="vo"}
+			<li {eq name="vo['current']" value="1"}class="curr"{/eq}>
+				<a href="{$vo['url']}">{$vo['title']}</a>
+			</li>
+			{/nav}
+			{notempty name="author_show"}
+			<div class="author">
+                <a href="{:url('author/index/index')}" class="go_writing icons"><i></i>作者专区</a>
+            </div>
+            {/notempty}
+		</ul>
+	</div>
+	<!--导航 end-->
+</div>

@@ -1,0 +1,18 @@
+安装说明
+
+系统要求
+
+	PHP要求5.6版本以上，低于5.6版本无法运行 支持php7
+	
+	addons,application,config,extend,public,runtime,template,uploads 目录必须要有写入权限 777
+
+	网站必须配置好伪静态(.htaccess为Apache伪静态配置文件，kyxscms.conf为Nginx伪静态配置文件)
+
+	宝塔面板要在 软件 php 设置里安装扩展 fileinfo
+
+
+官方论坛 http://bbs.kyxscms.com
+
+官方帮助 http://help.kyxscms.com
+
+发现BUG或是有好的建议意见可以到官方论坛发布
